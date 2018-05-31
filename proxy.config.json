@@ -1,0 +1,7 @@
+{
+    "/api": {
+        "target": "http://2672313d.ngrok.io",
+        "secure": false,
+        "changeOrigin": "true"
+    }
+}

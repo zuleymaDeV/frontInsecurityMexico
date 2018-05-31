@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">Inseguridad en Mexico</a>
+</nav>
+<br>
+<main class="container">
+    <div class="row">
+        <select class="form-control" [(ngModel)]="opcionSeleccionado" (change)="capturar()" >
+            <option value="0">Selecciona un estado..</option>
+            <option *ngFor="let state of states" [value]="state.idState">{{ state.name }}</option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h2 [hidden]="opcionSeleccionado == '0'">Estado: {{ verSeleccion }} </h2>
+        <h4>Poblacion: {{ states.population }}</h4>
+    </div>
+    <div class="row" style="float: right;">
+        <state-graph></state-graph>
+    </div>
+    <div class="row">
+        <types-insecurity></types-insecurity>
+    </div>
+</main>
+<footer class="footer mt-3t fixed-bottom">
+    <div class="card-footer text-muted text-center">
+        <p class="text-muted lead">Zuleyma Deniss Vazquez Reyes</p>
+        <a class="blockquote-footer" href="https://www.reporteindigo.com/reporte/inseguridad-en-mexico-problema-nunca-acabar-enero-mes-mas-violento/">mas informacion..</a>
+    </div>
+</footer>
+
